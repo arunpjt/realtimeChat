@@ -2,9 +2,11 @@ var express=require('express')
 var app=express()
 var db=require('./connection')
 var bodyParser=require('body-parser')
+var cors=require('cors')
 app.use(express.static(__dirname))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:false}))
+app.use(cors())
 
 // mysql
 function selectUser(){
