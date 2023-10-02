@@ -44,7 +44,7 @@ function addMessages(message){
 function getMessages(){
    console.log('inside getMessage 1');
    
-  $.get('http://realtimechat23.netlify.app/messages', (data) => {
+  $.get('https://realtimechat23.netlify.app/messages', (data) => {
    console.log(data);
    data.forEach(addMessages);
    })
@@ -52,7 +52,7 @@ function getMessages(){
  
 function sendMessage(message){
    console.log('inside post message1');
-   $.post('http://realtimechat23.netlify.app/messages', message)
+   $.post('https://realtimechat23.netlify.app/messages', message)
    console.log('Inside post message2')
    getMessages()
  }
