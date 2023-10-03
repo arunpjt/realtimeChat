@@ -58,8 +58,8 @@
       }
 
       function sendMessage(message) {
-         $.post('/messages', message)
-         // $.post('https://realtimechat23.netlify.app:3000/messages', message)
+         // $.post('/messages', message)
+         $.post('https://realtimechat23.netlify.app:3000/messages', message)
          // $.post('http://localhost:3000/messages', message)
          console.log('Inside post message2')
          getMessages()
