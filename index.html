@@ -49,8 +49,8 @@
       }
 
       function getMessages() {
-         $.get('/messages', (data) => {
-         //   $.get('https://realtimechat23.netlify.app:3000/messages', (data) => {
+         // $.get('/messages', (data) => {
+           $.get('https://realtimechat23.netlify.app:3000/messages', (data) => {
          // $.get('http://localhost:3000/messages', (data) => {
             console.log(data);
             data.forEach(addMessages);
