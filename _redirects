@@ -1,4 +1,6 @@
 # Redirects from what the browser requests to what we serve
-/messages /messages
-#https://realtimechat23.netlify.app/messages /messages
+#/messages /messages
+https://realtimechat23.netlify.app/messages /messages
 #/messages https://realtimechat23.netlify.app/messages
+#/ /messages
+#https://realtimechat23.netlify.app /messages
