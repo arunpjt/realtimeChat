@@ -48,6 +48,7 @@
       }
 
       function getMessages() {
+         // $.get('http://localhost:3000/', (data) => {
          $.get('/messages', (data) => {
          //   $.get('https://realtimechat23.netlify.app:3000/messages', (data) => {
          // $.get('http://localhost:3000/messages', (data) => {
@@ -57,6 +58,7 @@
       }
 
       function sendMessage(message) {
+         // $.post('http://localhost:3000/', message)
          $.post('/messages', message)
          // $.post('https://realtimechat23.netlify.app:3000/messages', message)
          // $.post('http://localhost:3000/messages', message)

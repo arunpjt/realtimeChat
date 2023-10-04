@@ -37,6 +37,8 @@ app.get('/messages', async (req, res) => {
   await selectUser().then((response) => {
     JSON.stringify(response)
     data = response
+    console.log(data);
+    
   })
   res.send(data)
 })
