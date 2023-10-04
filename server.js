@@ -7,6 +7,7 @@ app.use(express.static(__dirname))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cors())
+app.use(cors({credentials: true,}));//To enable HTTP cookies over CORS,while making the AJAX request.
 
 // mysql
 function selectUser() {
@@ -32,7 +33,6 @@ let insertUser = (name, msg) => {
 
 // routes
 app.get('/messages', async (req, res) => {
-    console.log(req.body);
     let data
   await selectUser().then((response) => {
     JSON.stringify(response)
@@ -42,7 +42,6 @@ app.get('/messages', async (req, res) => {
 })
 
 app.post('/messages', async (req, res) => {
-  console.log(req.body);
   await insertUser(req.body.name, req.body.message).then(() => {
     // console.log('Not capturing insert query from db');
   }).catch(() => {

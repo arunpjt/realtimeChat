@@ -38,7 +38,6 @@
                message: $("#message").val()
             });
          })
-         console.log('printing log1');
          getMessages()
       })
 
@@ -49,8 +48,8 @@
       }
 
       function getMessages() {
-         // $.get('/messages', (data) => {
-           $.get('https://realtimechat23.netlify.app:3000/messages', (data) => {
+         $.get('/messages', (data) => {
+         //   $.get('https://realtimechat23.netlify.app:3000/messages', (data) => {
          // $.get('http://localhost:3000/messages', (data) => {
             console.log(data);
             data.forEach(addMessages);
@@ -58,8 +57,8 @@
       }
 
       function sendMessage(message) {
-         // $.post('/messages', message)
-         $.post('https://realtimechat23.netlify.app:3000/messages', message)
+         $.post('/messages', message)
+         // $.post('https://realtimechat23.netlify.app:3000/messages', message)
          // $.post('http://localhost:3000/messages', message)
          console.log('Inside post message2')
          getMessages()
